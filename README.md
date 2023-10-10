@@ -1,38 +1,25 @@
-# create-svelte
+# Svelte Popup Layout
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This Svelte project provides a layout with a base layer and a popup layer. The popup layer slides up from the bottom and can be closed by either dragging down a handle bar or clicking on a semi-transparent overlay.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Toggleable popup with slide animation.
+- Draggable handle bar to close the popup.
+- Clickable overlay to close the popup.
+- Scrollable content area within the popup.
+- Fixed action bar at the bottom of the popup for action buttons.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Setup
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+1. Clone the repository: `git clone https://github.com/jaensen/svelte-popup-layout.git`
+2. Install dependencies: `npm install`
+3. Start the project: `npm run dev`
 
-## Developing
+## Usage
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+To toggle the popup, click the "Toggle popup" button. To close the popup, either click on the overlay, or drag the handle bar at the top of the popup downwards.
 
-```bash
-npm run dev
+## License
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+MIT
