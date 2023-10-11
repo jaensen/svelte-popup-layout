@@ -29,11 +29,9 @@
 
 <div class="baseLayer">
     <button on:click={() => {
-		showPopUp = !showPopUp
-		if (showPopUp) {
-			$popupControls.open?.call(undefined)
-		}
-	}}>Toggle popup
+        $popupControls.open?.call(undefined)
+        showPopUp = true;
+	}}>Open popup
     </button>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
@@ -188,13 +186,13 @@
     </p>
     {#if showPopUp}
         <div class="overlay" style="opacity: {overlayOpacity}"
-             on:click={ () => $popupControls.close?.call(undefined) }></div>
+             on:mousedown={ () => $popupControls.close?.call(undefined) }
+             on:touchstart={ () => $popupControls.close?.call(undefined) }
+        ></div>
     {/if}
     <PopUp on:close={() =>{
         showPopUp = false;
-        console.log("on:close");
     }} on:overlayOpacity={(event) => {
-			console.log(event.detail.opacity);
-			overlayOpacity = event.detail.opacity;
-        }}/>
+        overlayOpacity = event.detail.opacity;
+    }}/>
 </div>
